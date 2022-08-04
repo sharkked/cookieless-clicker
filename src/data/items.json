@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "id": "0",
+      "name": "Item 0",
+      "description": "This is an item description.",
+      "cost": "100000000000000000000000000000000000000",
+      "cps": "10000000000"
+    },
+    {
+      "id": "1",
+      "name": "Item 1",
+      "cost": 15,
+      "cps": 0.1
+    },
+    {
+      "id": "2",
+      "name": "Item 2",
+      "cost": 100,
+      "cps": 1
+    },
+    {
+      "id": "3",
+      "name": "Item 3",
+      "cost": 1000,
+      "cps": 10
+    }
+  ]
+}
