@@ -8,7 +8,7 @@
 
 <style>
 .sidebar {
-  width: 35rem;
+  width: 40rem;
   height: 100%;
   display: flex;
   flex-direction: column;

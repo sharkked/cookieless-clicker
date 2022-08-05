@@ -27,4 +27,8 @@
   width: 100%;
   height: 1px;
 }
+
+.sidebar-item:nth-last-child(2) {
+  border: none;
+}
 </style>

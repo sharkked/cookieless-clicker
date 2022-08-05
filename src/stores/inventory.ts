@@ -118,8 +118,8 @@ export const buyValue = (item: Item, quantity: number) => {
 };
 
 export const buyMaxQuantity = (item: Item, currency: number) => {
-  return Math.floor(invGeometricSum(item.cost, R, currency / (R ** item.owned)));
-}
+  return Math.floor(invGeometricSum(item.cost, R, currency / R ** item.owned));
+};
 
 export const sellValue = (item: Item, quantity: number) => {
   quantity = Math.min(quantity, item.owned);
@@ -135,5 +135,5 @@ export const geometricSum = (a: number, r: number, n: number) => {
 };
 
 export const invGeometricSum = (a: number, r: number, s: number) => {
-  return Math.log(1 - s * (1 - r) / a) / Math.log(r);
+  return Math.log(1 - (s * (1 - r)) / a) / Math.log(r);
 };

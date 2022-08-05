@@ -1,5 +1,21 @@
 @import "./base.css";
 
+.sharkk {
+  color: #ff00a8;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #008cff;
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+
+a:hover {
+  opacity: 1;
+}
+
 button {
   font-family: 'Courier New', Courier, monospace;
 }

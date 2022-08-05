@@ -55,6 +55,7 @@ function onItemClicked(e: Event, item: Item) {
           :item="item"
           @click="(e: Event) => onItemClicked(e, item)"
         />
+      <div class="trans-flag"></div>
       </section>
     </Sidebar>
   </div>
@@ -70,14 +71,13 @@ function onItemClicked(e: Event, item: Item) {
 }
 
 .clicker {
-  width: 30rem;
-  height: 30rem;
-  border: 1px solid var(--color-border);
+  width: 50rem;
+  height: 50rem;
+  border: 0.5rem solid var(--color-border);
   border-radius: 100%;
   background-color: var(--color-background);
   color: var(--color-text);
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 3rem;
   outline: none;
   cursor: pointer;
   transition: transform 0.1s, background-color 0.1s;
@@ -115,13 +115,24 @@ function onItemClicked(e: Event, item: Item) {
 
 @keyframes breathe {
   0% {
-    transform: scale(1);
+    transform: scale(0.95);
   }
   50% {
-    transform: scale(1.05);
-  }
-  100% {
     transform: scale(1);
   }
+  100% {
+    transform: scale(0.95);
+  }
+}
+
+.trans-flag {
+  background-image: url("../assets/transflag.svg");
+  background-repeat: no-repeat;
+  width: 1.666667rem;
+  height: 1rem;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  opacity: 0.2;
 }
 </style>
