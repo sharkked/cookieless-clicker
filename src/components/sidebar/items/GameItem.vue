@@ -27,7 +27,7 @@ function costText(item: Item) {
   <SidebarItem v-bind:key="item" class="item">
     <div class="layout horizontal separated">
       <h2>{{ item.owned }}</h2>
-      <h2>{{ item.name }}</h2>
+      <h2 style="width: 15rem">{{ item.name }}</h2>
       <div class="item-info">
         <div>{{ costText(item) }}</div>
         <div>CPS: {{ formatNumber(item.cps) }}</div>

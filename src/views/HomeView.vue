@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref, reactive } from "vue";
 import { useInventoryStore, type Item } from "../stores/inventory";
 import { formatNumber } from "../utils/format";
 
@@ -23,7 +22,7 @@ function onItemClicked(e: Event, item: Item) {
 
 <template>
   <div class="layout horizontal">
-    <div class="content vertical">
+    <div class="layout content vertical">
       <div class="breathe">
         <div class="sway">
           <button class="clicker" @click="inventory.currency += 1">
@@ -71,8 +70,8 @@ function onItemClicked(e: Event, item: Item) {
 }
 
 .clicker {
-  width: 20rem;
-  height: 20rem;
+  width: 30rem;
+  height: 30rem;
   border: 1px solid var(--color-border);
   border-radius: 100%;
   background-color: var(--color-background);
@@ -82,6 +81,16 @@ function onItemClicked(e: Event, item: Item) {
   outline: none;
   cursor: pointer;
   transition: transform 0.1s, background-color 0.1s;
+}
+
+.clicker:hover {
+  transform: scale(1.05) !important;
+  background-color: var(--color-background-soft);
+}
+
+.clicker:active {
+  transform: scale(0.98) !important;
+  background-color: var(--color-background);
 }
 
 .sway {
@@ -114,15 +123,5 @@ function onItemClicked(e: Event, item: Item) {
   100% {
     transform: scale(1);
   }
-}
-
-.clicker:hover {
-  transform: scale(1.05) !important;
-  background-color: var(--color-background-soft);
-}
-
-.clicker:active {
-  transform: scale(0.98) !important;
-  background-color: var(--color-background);
 }
 </style>

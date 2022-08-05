@@ -1,29 +1,113 @@
 {
   "items": [
     {
-      "id": "0",
-      "name": "Item 0",
-      "description": "This is an item description.",
-      "cost": "100000000000000000000000000000000000000",
-      "cps": "10000000000"
-    },
-    {
-      "id": "1",
-      "name": "Item 1",
+      "id": "cursor",
+      "name": "Cursor",
       "cost": 15,
       "cps": 0.1
     },
     {
-      "id": "2",
-      "name": "Item 2",
+      "id": "grandma",
+      "name": "Grandma",
       "cost": 100,
       "cps": 1
     },
     {
-      "id": "3",
-      "name": "Item 3",
+      "id": "farm",
+      "name": "Farm",
       "cost": 1000,
-      "cps": 10
+      "cps": 8
+    },
+    {
+      "id": "mine",
+      "name": "Mine",
+      "description": "This is an item description.",
+      "cost": 12000,
+      "cps": 47
+    },
+    {
+      "id": "bank",
+      "name": "Bank",
+      "cost": 1.4e6,
+      "cps": 1400
+    },
+    {
+      "id": "temple",
+      "name": "Temple",
+      "cost": 2e7,
+      "cps": 7800
+    },
+    {
+      "id": "wizardtower",
+      "name": "Wz Tower",
+      "cost": 3.3e8,
+      "cps": 44000
+    },
+    {
+      "id": "shipment",
+      "name": "Shipment",
+      "cost": 5.1e9,
+      "cps": 2.6e5
+    },
+    {
+      "id": "alchlab",
+      "name": "Alch Lab",
+      "cost": 7.5e10,
+      "cps": 1.6e6
+    },
+    {
+      "id": "portal",
+      "name": "Portal",
+      "cost": 1e12,
+      "cps": 1e7
+    },
+    {
+      "id": "timemachine",
+      "name": "Time Mch",
+      "cost": 1.4e13,
+      "cps": 6.5e7
+    },
+    {
+      "id": "antimatter",
+      "name": "Condensr",
+      "cost": 1.7e14,
+      "cps": 4.3e8
+    },
+    {
+      "id": "prism",
+      "name": "Prism",
+      "cost": 2.1e15,
+      "cps": 2.9e9
+    },
+    {
+      "id": "chancemaker",
+      "name": "Chncemkr",
+      "cost": 2.6e16,
+      "cps": 2.2e10
+    },
+    {
+      "id": "fractal",
+      "name": "Fr Ngine",
+      "cost": 3.1e17,
+      "cps": 1.5e11
+    },
+    {
+      "id": "console",
+      "name": "JSCnsole",
+      "cost": 7.1e19,
+      "cps": 1.1e12
+    },
+    {
+      "id": "idleverse",
+      "name": "Idlevrse",
+      "cost": 1.2e22,
+      "cps": 8.3e12
+    },
+    {
+      "id": "cortex",
+      "name": "Cortex",
+      "cost": 1.9e24,
+      "cps": 6.4e13
     }
   ]
 }

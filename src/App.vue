@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
-  <header></header>
+  <header>this is literally just cookie clicker with no cookies lmfao</header>
   <RouterView />
 </template>
 
@@ -11,5 +11,12 @@ import { RouterLink, RouterView } from "vue-router";
 #app {
   height: 100vh;
   overflow: hidden;
+
+  user-select: none;
+}
+
+header {
+  padding-left: 1rem;
+  position: absolute;
 }
 </style>

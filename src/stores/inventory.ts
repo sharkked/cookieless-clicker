@@ -81,8 +81,11 @@ export const useInventoryStore = defineStore({
 
       if (!item) return;
 
-      const cost = buyValue(item, quantity);
-      if (this.currency < cost) return;
+      let cost = buyValue(item, quantity);
+      if (this.currency < cost) {
+        quantity = buyMaxQuantity(item, this.currency);
+        cost = buyValue(item, quantity);
+      }
 
       this.currency -= cost;
       item.owned += quantity;
@@ -111,18 +114,26 @@ export const useInventoryStore = defineStore({
 });
 
 export const buyValue = (item: Item, quantity: number) => {
-  return geometricSum(item.cost, quantity, R) * R ** item.owned;
+  return geometricSum(item.cost, R, quantity) * R ** item.owned;
 };
+
+export const buyMaxQuantity = (item: Item, currency: number) => {
+  return Math.floor(invGeometricSum(item.cost, R, currency / (R ** item.owned)));
+}
 
 export const sellValue = (item: Item, quantity: number) => {
   quantity = Math.min(quantity, item.owned);
   return (
-    geometricSum(item.cost, quantity, R) *
+    geometricSum(item.cost, R, quantity) *
     0.5 *
     R ** (item.owned - quantity - 1)
   );
 };
 
-export const geometricSum = (a: number, n: number, r: number) => {
+export const geometricSum = (a: number, r: number, n: number) => {
   return (a * (1 - r ** n)) / (1 - r);
+};
+
+export const invGeometricSum = (a: number, r: number, s: number) => {
+  return Math.log(1 - s * (1 - r) / a) / Math.log(r);
 };
